@@ -1,9 +1,0 @@
-*
-!README.md
-!.gitignore
-
-# Extra ignores (optional)
-venv/
-.env
-__pycache__/
-*.db
