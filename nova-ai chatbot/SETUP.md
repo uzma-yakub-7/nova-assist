@@ -1,4 +1,4 @@
-# NovaAssist Writing Engine — Setup Guide
+# NovaAssist Writing Engine — Setup Guide for Windows
 
 nova-ai chatbot/
 
@@ -39,7 +39,7 @@ Before starting, make sure you have the following installed on your PC.
 
 ## Install Python
 - Go to https://www.python.org/downloads
-- Navigate to "Or  get the standalone installer for Python 3.14.4"|
+- Navigate to "Or  get the standalone installer for Python 3.14.4"
 - Click on Python 3.14.4 Link. Only if you want to choose exactly where (which drive/folder) to install it.
 - Go to Downloads
 - Run the installer
@@ -79,7 +79,7 @@ Choose one of these two methods:
 ### Method A — Create folder manually:
 - Open File Explorer
 - Choose a drive (e.g. E:)
-- Create a new folder (e.g. nova-ai chatbot)
+- Create a new folder (e.g. name-ai chatbot)
 - Open VS Code
 - Go to File → Add Folder to Workspace
 - Select your folder
@@ -93,14 +93,17 @@ Choose one of these two methods:
 - Press Enter
 
 ### Method B — Clone from GitHub:
-- Open VS Code terminal
+- Open VS Code (Command Prompt terminal)
+- Change location. D: —> Press Enter
 - Type:
   git clone https://github.com/your-repo-link
 - Press Enter
+- GitHub repo will appear in VS code as folder. And folder will automatically be saved to the drive you choose.
+- Edit the files Or Create New File. Do not Forget to Save Your Files. 
 
 ---
 
-## Get Your Free Groq API Key
+## Get API Key
 - Go to https://console.groq.com
 - Sign up with your Google account
 - Click "API Keys" on the left sidebar
@@ -133,20 +136,20 @@ Choose one of these two methods:
 ## Install Required Packages
 - Make sure (venv) is active in your terminal
 - Run:
-  pip install langchain-groq. Press Enter.
-  pip install langgraph langchain langchain-groq streamlit python-dotenv duckduckgo-search langchain-community faiss-cpu pypdf langgraph-checkpoint-sqlite. Enter
-  pip install -U ddgs. Enter
-- Wait for installation to complete ✅
+   - pip install langchain-groq. Press Enter.
+   - pip install langgraph langchain langchain-groq streamlit python-dotenv duckduckgo-search langchain-community faiss-cpu pypdf langgraph-checkpoint-sqlite. Enter
+   - pip install -U ddgs. Enter
+- Wait for each installation to complete ✅
 
 ---
 
 ## Create .gitignore File
 - Inside your project folder, create a file called .gitignore
 - Add this inside:
-  venv/
-  .env
-  __pycache__/
-  *.db
+  - venv/
+  - .env
+  - __pycache__/
+  - *.db
 - Save the file
 
 ---
@@ -168,26 +171,72 @@ Choose one of these two methods:
 
 ---
 
+## Screen Recording
+- If your PC has TWO ports (green + pink):
+    - Green = speakers/headphones (sound out)
+    - Pink = microphone (sound in).
+
+- Install Screen Recorder
+    - Go to Browser. Search for Bandicam
+    - Install Bandicam to your device:
+    - Plug in mic (pink port). 
+    - If using headset: Plug into green + pink ports (desktop).
+  
+- Set mic in Windows:
+  - Right-click 🔊 sound icon (bottom right)
+  - Click Sound settings.
+  - Under Input: Choose your microphone (e.g., “Headset Mic”)
+  - Speak → check if bar moves ✅
+
+- Setup Bandicam audio:
+   - Open Bandicam
+   - Go to Video tab → Settings
+   - Under Sound: 
+       - Primary Sound Device → Speakers (your PC sound)
+       - Secondary Sound Device → Your Microphone
+   - Click OK
+ 
+- Test: 
+   - Go to Bandicam. Click REC. Speak
+   - Stop and play → confirm voice recorded
+ 
+## Struggling With Bandicam for Recording Your Voice? 
+- Here's an alternative:
+     - Open your phone
+     - Use Voice Recorder app (default app)
+     - Open Bandicam
+     - Select screen recording mode and turn on screen recording
+     - Record your voice while watching your project on the Desktop Screen (Monitor).
+     - Save the screen recording and  audio file
+     - Go to Canva or Capcut. Upload Screen Recording (from your desktop). Upload audio file (from your phone). Adjust, edit either from Desktop or from your pc.
+     - Save the file:
+          - If edited from phone, save the file to Downloads. Go to GitHub. Select Your Repo. Press on 3 dots beside the green colored Code button. Press on Upload file. Press on Choose Your File. Navigate to your downloaded file and upload the file. Commit: Added file via upload. Press on Commit Changes. 
+         - If edited from the desktop, save it to your project folder. Go to VS Code. Open Terminal Command Prompt. Push the screen recording to Github
+
+
 ## Pushing to GitHub
 - Open GitBash Terminal in VS Code. 
-  Tell Git who you are:
-  git config --global user.name "your-github-profile-username" . Enter
-  git config --global user.email "your-email-in-github" . Enter
-  Check if it worked: 
-  git config --global --list
-  Check repo status: 
-  git status
-  You should see your project files
-  Stage Files: 
-  git add .
-  Confirm Stagging: 
-  git status
-  You should now see:"Changes to be committed: (many files)"
-  Commit files: 
-  git commit -m "Added Files" . Enter
-  git push. Enter
+- Tell Git who you are:
+    - git config --global user.name "your-github-profile-username" . Enter
+    - git config --global user.email "your-email-in-github" . Enter
+- Check if it worked:  git config --global --list
+- Check repo status: git status
+- You should see your project files
+- Stage Files: git add .
+- Confirm Stagging: git status
+- You should now see:"Changes to be committed: (many files)"
+- Commit files:
+    - git commit -m "Added Files" . Enter
+    - git push. Enter
 
  ---
+
+ ## Adding Images to README.md
+ - Inside your project create a folder named images.
+ - Upload images to that folder. Image type can be png,jpg or jpeg. You can Also upload videos to that folder.
+ - Inside < />, type: img src="images/demo.png" width="50%"
+ - Save the file.
+
 
 ## Hosting Online (Streamlit Cloud)
 - Push your code to GitHub
