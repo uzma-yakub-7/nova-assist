@@ -2,6 +2,9 @@
 !README.md
 !.gitignore
 
+!nova-ai chatbot/images/
+!nova-ai chatbot/images/**
+
 # Extra ignores (optional)
 venv/
 .env
